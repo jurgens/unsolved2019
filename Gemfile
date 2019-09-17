@@ -10,12 +10,17 @@ gem 'puma', '~> 3.11'
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'image_processing', '~> 1.2'
 # gem 'rack-cors'
-
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'roar'
+gem 'seed-fu'
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'multi_json'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-byebug'
 end
 
 group :development do
