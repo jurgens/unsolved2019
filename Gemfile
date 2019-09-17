@@ -9,7 +9,7 @@ gem 'puma', '~> 3.11'
 # gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'image_processing', '~> 1.2'
-gem 'rack-cors'
+gem 'rack-cors', require: 'rack/cors'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'roar'
 gem 'seed-fu'
