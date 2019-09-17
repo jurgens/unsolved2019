@@ -5,6 +5,7 @@ class RecipeRepresenter < Roar::Decorator
 
   property :id
   property :name
+  property :description
 
   collection :foods, class: Food do
     property :id, as: :food_id
