@@ -6,6 +6,7 @@ class RecipesController < ApplicationController
   private
 
   def get_recipes
-    Recipe.limit(2)
+    food = current_user.purchases.map(&:food).uniq
+    RecipeMatcher.call(food)
   end
 end

@@ -6,8 +6,6 @@ class ProductsController < ApplicationController
   private
 
   def get_purchases
-    Food.random(3).map do |food|
-      Purchase.create food_id: food.id
-    end
+    Purchase.generate(current_user)
   end
 end
