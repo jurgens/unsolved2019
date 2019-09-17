@@ -6,6 +6,6 @@ class ProductsController < ApplicationController
   private
 
   def get_purchases
-    Purchase.generate(current_user)
+    PurchaseFetcher.call(current_user)
   end
 end

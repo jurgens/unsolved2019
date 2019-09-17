@@ -7,6 +7,9 @@ class ApplicationController < ActionController::API
   def init_session
     user_id = session[:user_id]
     user = User.find_or_create_by id: user_id
+
+    Purchase.generate(user) if user.purchases.none?
+
     session[:user_id] = user.id
   end
 
